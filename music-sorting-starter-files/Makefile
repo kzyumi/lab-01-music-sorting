@@ -21,7 +21,7 @@
 # TODO (begin) #
 #######################
 # Change 'youruniqname' to match your UM uniqname (no quote marks).
-UNIQNAME    = youruniqname
+UNIQNAME    = kathyzz
 
 # Change the right hand side of the identifier to match the project identifier
 # given in the project or lab specification.
@@ -34,7 +34,8 @@ EXECUTABLE  = lab1
 # executable.cpp (substituted from EXECUTABLE above), or main.cpp
 PROJECTFILE = $(or $(wildcard project*.cpp $(EXECUTABLE).cpp), main.cpp)
 # If main() is in another file delete line above, edit and uncomment below
-#PROJECTFILE = mymainfile.cpp
+#PROJECTFILE = lab1.cpp
+
 #######################
 # TODO (end) #
 #######################
@@ -292,6 +293,8 @@ help:
 # % g++ -std=c++1z -MM *.cpp
 #
 # ADD YOUR OWN DEPENDENCIES HERE
+getop.o: lab1.cpp
+lab1: getop.o sorting.h
 
 ######################
 # TODO (end) #
